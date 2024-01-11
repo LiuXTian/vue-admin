@@ -8,13 +8,13 @@ export default () => defineConfig({
     proxy: {
       '/api': {
         // 代理地址
-        target: "http://110.41.161.81/",
+        target: 'http://110.41.161.81/',
         // 重写地址
         rewrite: path => path.replace(/^\/api\//, ''),
         // 开启代理在本地创建一个服务器
         changeOrigin: true,
-      }
-    }
+      },
+    },
   },
   plugins: [
     vue(),
@@ -23,6 +23,6 @@ export default () => defineConfig({
   resolve: {
     alias: {
       // '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+    },
+  },
 })
